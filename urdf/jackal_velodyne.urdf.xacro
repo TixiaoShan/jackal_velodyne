@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<robot name="jackal" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="jackal" 
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:property name="PI" value="3.1415926535897931" />
 
   <xacro:property name="wheelbase" value="0.262" />
@@ -18,10 +19,18 @@
 
   <xacro:property name="mount_spacing" value="0.120" />
 
-  <material name="dark_grey"><color rgba="0.2 0.2 0.2 1.0" /></material>
-  <material name="light_grey"><color rgba="0.4 0.4 0.4 1.0" /></material>
-  <material name="yellow"><color rgba="0.8 0.8 0.0 1.0" /></material>
-  <material name="black"><color rgba="0.15 0.15 0.15 1.0" /></material>
+  <material name="dark_grey">
+    <color rgba="0.2 0.2 0.2 1.0" />
+  </material>
+  <material name="light_grey">
+    <color rgba="0.4 0.4 0.4 1.0" />
+  </material>
+  <material name="yellow">
+    <color rgba="0.8 0.8 0.0 1.0" />
+  </material>
+  <material name="black">
+    <color rgba="0.15 0.15 0.15 1.0" />
+  </material>
 
   <xacro:macro name="wheel" params="prefix *joint_pose">
 
@@ -42,10 +51,7 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.477"/>
-        <inertia
-          ixx="0.0013" ixy="0" ixz="0"
-          iyy="0.0024" iyz="0"
-          izz="0.0013"/>
+        <inertia ixx="0.0013" ixy="0" ixz="0" iyy="0.0024" iyz="0" izz="0.0013"/>
       </inertial>
     </link>
 
@@ -113,11 +119,8 @@
       <origin xyz="0.012  0.002 0.067" rpy="0 0 0"/>
       <mass value="16.523"/>
       <!-- Moments of inertia: ( chassis without wheels ) -->
-      <inertia
-        ixx="0.3136" ixy="-0.0008" ixz="0.0164"
-        iyy="0.3922" iyz="-0.0009"
-        izz="0.4485"/>
-      </inertial>
+      <inertia ixx="0.3136" ixy="-0.0008" ixz="0.0164" iyy="0.3922" iyz="-0.0009" izz="0.4485"/>
+    </inertial>
   </link>
 
   <link name="fenders_link">
@@ -180,13 +183,6 @@
     <origin xyz="${-mount_spacing} 0 0" />
   </joint>
 
-  <link name="front_mount"></link>
-  <joint name="front_mount_joint" type="fixed">
-    <parent link="mid_mount" />
-    <child link="front_mount" />
-    <origin xyz="${mount_spacing} 0 0" />
-  </joint>
-
   <!-- Bring in simulation data for Gazebo. -->
   <xacro:include filename="$(find jackal_description)/urdf/jackal.gazebo" />
 
@@ -200,23 +196,16 @@
     <xacro:include filename="$(env JACKAL_URDF_EXTRAS)" />
   </xacro:if>
 
-
-
-
-
-
-
-
   <!-- VLP-16 -->
   <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="1800" max_range="3.0">
+  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="1800" max_range="3.0" gpu="true">
     <origin xyz="0 0 0.3" rpy="0 0 0" />
   </VLP-16>
 
   <!-- VHDL-32E -->
-<!--   <xacro:include filename="$(find velodyne_description)/urdf/HDL-32E.urdf.xacro"/>
+  <!--   <xacro:include filename="$(find velodyne_description)/urdf/HDL-32E.urdf.xacro"/>
   <HDL-32E parent="base_link" name="velodyne_2" topic="/velodyne_points_2" hz="10" samples="1800">
     <origin xyz="0 0 0.6" rpy="0 0 0" />
   </HDL-32E> -->
-  
+
 </robot>
