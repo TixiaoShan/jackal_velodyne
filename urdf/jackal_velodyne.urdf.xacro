@@ -183,6 +183,13 @@
     <origin xyz="${-mount_spacing} 0 0" />
   </joint>
 
+  <link name="front_mount"></link>
+  <joint name="front_mount_joint" type="fixed">
+    <parent link="mid_mount" />
+    <child link="front_mount" />
+    <origin xyz="${mount_spacing} 0 0" />
+  </joint>
+
   <!-- Bring in simulation data for Gazebo. -->
   <xacro:include filename="$(find jackal_description)/urdf/jackal.gazebo" />
 
