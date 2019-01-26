@@ -191,12 +191,12 @@
   </joint>
 
   <!-- Bring in simulation data for Gazebo. -->
-  <xacro:include filename="$(find jackal_description)/urdf/jackal.gazebo" />
+  <xacro:include filename="$(find jackal_velodyne)/urdf/jackal.gazebo" />
 
   <!-- Optional standard accessories, including their simulation data. The rendering
        of these into the final description is controlled by optenv variables, which
        default each one to off.-->
-  <!-- <xacro:include filename="$(find jackal_description)/urdf/accessories.urdf.xacro" /> -->
+  <xacro:include filename="$(find jackal_description)/urdf/accessories.urdf.xacro" />
 
   <!-- Optional custom includes. -->
   <xacro:if value="$(optenv JACKAL_URDF_EXTRAS 0)">
@@ -205,7 +205,7 @@
 
   <!-- VLP-16 -->
   <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="800" max_range="3.0" gpu="true">
+  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="800" max_range="3.0" noise="0.016" gpu="true">
     <origin xyz="0 0 0.3" rpy="0 0 0" />
   </VLP-16>
 

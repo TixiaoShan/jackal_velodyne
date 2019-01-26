@@ -33,8 +33,8 @@
 
   <!-- Control -->
   <include file="$(find jackal_control)/launch/control.launch" />
-  <include file="$(find jackal_control)/launch/teleop.launch">
-    <arg name="joystick" value="false"/>
+  <include file="$(find teleop_twist_joy)/launch/teleop.launch">
+    <arg name="joy_dev" value="/dev/input/js0"/>
   </include>
 
   <!-- Spawn Jackal -->
