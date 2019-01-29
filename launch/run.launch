@@ -22,6 +22,7 @@
     <arg name="use_sim_time" value="$(arg use_sim_time)" />
     <arg name="headless" value="$(arg headless)" />
     <arg name="world_name" value="$(arg world_name)" />
+    <arg name="verbose" value="true" />
   </include>
 
   <!-- Load Jackal's description-->
@@ -33,9 +34,6 @@
 
   <!-- Control -->
   <include file="$(find jackal_control)/launch/control.launch" />
-  <include file="$(find teleop_twist_joy)/launch/teleop.launch">
-    <arg name="joy_dev" value="/dev/input/js0"/>
-  </include>
 
   <!-- Spawn Jackal -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -model jackal -param robot_description -x 0 -y 0 -z 0.0" />
