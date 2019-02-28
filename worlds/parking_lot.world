@@ -81,10 +81,10 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>3795 189000000</sim_time>
-      <real_time>23 675445828</real_time>
-      <wall_time>1550801275 841103333</wall_time>
-      <iterations>23591</iterations>
+      <sim_time>4422 659000000</sim_time>
+      <real_time>629 956662133</real_time>
+      <wall_time>1551301414 180089360</wall_time>
+      <iterations>627470</iterations>
       <model name='grey_wall_1'>
         <pose frame=''>0 10 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -100,6 +100,16 @@
         <scale>1 1 1</scale>
         <link name='link'>
           <pose frame=''>0 -10 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='grey_wall_3'>
+        <pose frame=''>-10 0 0 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-10 0 0 0 -0 1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -123,6 +133,40 @@
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='jackal'>
+        <pose frame=''>0.064469 0.007064 0.06349 6e-06 9e-06 0.001649</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>0.064469 0.007064 0.06349 6e-06 9e-06 0.001649</pose>
+          <velocity>-0.000827 0.000696 -0.00969 0.005901 0.007712 -0.00132</velocity>
+          <acceleration>0.035474 -0.012234 -9.79123 -0.091533 -0.166412 0.042898</acceleration>
+          <wrench>0.654996 -0.225884 -180.785 0 -0 0</wrench>
+        </link>
+        <link name='front_left_wheel_link'>
+          <pose frame=''>0.195159 0.195075 0.097991 3.1e-05 0.907854 0.001672</pose>
+          <velocity>-4.2e-05 0.000172 -0.009718 0.00247 0.007706 -0.00097</velocity>
+          <acceleration>-0.326224 0.057257 -10.0072 0.491442 -1.30811 0.934076</acceleration>
+          <wrench>-0.155609 0.027312 -4.77345 0 -0 0</wrench>
+        </link>
+        <link name='front_right_wheel_link'>
+          <pose frame=''>0.195779 -0.180515 0.097989 1.9e-05 0.873847 0.001664</pose>
+          <velocity>-0.000658 0.000265 -0.011947 0.004175 0.007709 -0.00133</velocity>
+          <acceleration>0.013069 0.004954 -9.72645 0.410764 -0.185762 0.031125</acceleration>
+          <wrench>0.006234 0.002363 -4.63952 0 -0 0</wrench>
+        </link>
+        <link name='rear_left_wheel_link'>
+          <pose frame=''>-0.066839 0.194643 0.097993 -1e-06 0.462412 0.001654</pose>
+          <velocity>-0.000536 0.000676 -0.007551 0.007619 0.007715 -0.002714</velocity>
+          <acceleration>-0.456014 0.211667 -9.79988 2.94445 0.947047 1.87092</acceleration>
+          <wrench>-0.217519 0.100965 -4.67454 0 -0 0</wrench>
+        </link>
+        <link name='rear_right_wheel_link'>
+          <pose frame=''>-0.06622 -0.180947 0.097991 1.2e-05 0.687505 0.001662</pose>
+          <velocity>-0.00097 0.000632 -0.009791 0.005013 0.00771 -0.002631</velocity>
+          <acceleration>-0.603989 0.199673 -10.006 -0.096999 -1.32284 -1.70131</acceleration>
+          <wrench>-0.288103 0.095244 -4.77286 0 -0 0</wrench>
         </link>
       </model>
       <model name='suv'>
@@ -373,6 +417,108 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>2.68877 -9.29406 0 0 -0 0</pose>
     </model>
+    <model name='grey_wall_3'>
+      <link name='link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <inertial>
+          <mass>1</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>20 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0 0 0 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>20 0.2 2.8</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>2.68877 -9.29406 0 0 -0 0</pose>
+    </model>
     <model name='grey_wall_4'>
       <link name='link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
@@ -477,7 +623,7 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>0 0 35.6075 -3e-06 1.57079 -3e-06</pose>
+        <pose frame=''>0 0 35 0 1.57079 0</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
