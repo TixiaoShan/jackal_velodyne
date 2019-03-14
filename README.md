@@ -1,3 +1,6 @@
+![](/launch/pic/demo.gif)
+
+
 # Simulate Jackal and Velodyne in Gazebo
 
 
