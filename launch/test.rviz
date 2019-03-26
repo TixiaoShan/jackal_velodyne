@@ -31,8 +31,15 @@ Visualization Manager:
     - Class: rviz/Axes
       Enabled: true
       Length: 0.5
-      Name: base_link
+      Name: map
       Radius: 0.100000001
+      Reference Frame: map
+      Value: true
+    - Class: rviz/Axes
+      Enabled: true
+      Length: 0.300000012
+      Name: base_link
+      Radius: 0.075000003
       Reference Frame: base_link
       Value: true
     - Class: rviz/Axes
@@ -45,8 +52,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 1.4142369
-        Min Value: -0.00529873371
+        Max Value: 1.41778886
+        Min Value: -0.00451511145
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -121,7 +128,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10.9252148
+      Distance: 8.68595409
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -136,10 +143,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.32979679
+      Pitch: 0.614797473
       Target Frame: base_link
       Value: Orbit (rviz)
-      Yaw: 5.92870808
+      Yaw: 5.85370636
     Saved: ~
 Window Geometry:
   Displays:
