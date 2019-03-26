@@ -11,6 +11,17 @@ sudo apt-get install ros-kinetic-jackal-*
 sudo apt-get install ros-kinetic-velodyne-*
 ```
 
+## Compile
+
+You can use the following commands to download and compile the package.
+
+```
+cd ~/catkin_ws/src
+git clone https://github.com/TixiaoShan/jackal_velodyne.git
+cd ..
+catkin_make
+```
+
 ## Run
 
 ```

@@ -63,7 +63,7 @@ public:
         thisPose.orientation.x = 0;
         thisPose.orientation.y = 0;
         thisPose.orientation.z = 0;
-        thisPose.orientation.w = 0;
+        thisPose.orientation.w = 1;
 
         // set gazebo msg state
         modelstate.pose = thisPose;
