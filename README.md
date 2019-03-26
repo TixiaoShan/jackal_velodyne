@@ -34,3 +34,8 @@ wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 sudo apt update
 sudo apt upgrade
 ```
+
+## Teleop Jackal
+
+1. Install teleop package `sudo apt-get install ros-kinetic-teleop-twist-keyboard`
+2. Run `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
