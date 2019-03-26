@@ -37,5 +37,5 @@ sudo apt upgrade
 
 ## Teleop Jackal
 
-1. Install teleop package `sudo apt-get install ros-kinetic-teleop-twist-keyboard`
-2. Run `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
+1. Install teleop package: `sudo apt-get install ros-kinetic-teleop-twist-keyboard`
+2. Run: `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
