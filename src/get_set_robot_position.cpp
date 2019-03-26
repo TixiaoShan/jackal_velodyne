@@ -9,6 +9,8 @@ private:
     ros::ServiceClient setClient;
     ros::ServiceClient getClient;
 
+    gazebo_msgs::ModelState modelstate;
+
     gazebo_msgs::SetModelState setmodelstate;
     gazebo_msgs::GetModelState getmodelstate;
     
@@ -21,7 +23,6 @@ public:
         getClient = nh.serviceClient<gazebo_msgs::GetModelState>("/gazebo/get_model_state");
 
         // Set Gazebo state
-        gazebo_msgs::ModelState modelstate;
         modelstate.model_name = "jackal";
         modelstate.reference_frame = "world";
         setmodelstate.request.model_state = modelstate;
@@ -65,7 +66,6 @@ public:
         thisPose.orientation.w = 0;
 
         // set gazebo msg state
-        gazebo_msgs::ModelState modelstate;
         modelstate.pose = thisPose;
         setmodelstate.request.model_state = modelstate;
 
