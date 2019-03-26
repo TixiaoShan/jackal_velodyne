@@ -44,5 +44,8 @@
 
   <!-- Rviz -->
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find jackal_velodyne)/launch/test.rviz" />
+
+  <!-- TF -->
+  <node pkg="jackal_velodyne" type="tf_publisher"    name="tf_publisher"    output="screen"/>
   
 </launch>

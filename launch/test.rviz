@@ -3,8 +3,7 @@ Panels:
     Help Height: 78
     Name: Displays
     Property Tree Widget:
-      Expanded:
-        - /Global Options1
+      Expanded: ~
       Splitter Ratio: 0.625
     Tree Height: 549
   - Class: rviz/Selection
@@ -46,8 +45,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 1.65598512
-        Min Value: -0.0697498024
+        Max Value: 1.4142369
+        Min Value: -0.00529873371
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -107,7 +106,7 @@ Visualization Manager:
   Global Options:
     Background Color: 0; 0; 0
     Default Light: true
-    Fixed Frame: base_link
+    Fixed Frame: map
     Frame Rate: 60
   Name: root
   Tools:

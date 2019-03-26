@@ -23,3 +23,9 @@ include_directories(
 link_directories(
 	include
 )
+
+add_executable(tf_publisher src/tf_publisher.cpp)
+target_link_libraries(tf_publisher ${catkin_LIBRARIES})
+
+add_executable(get_set_robot_position src/get_set_robot_position.cpp)
+target_link_libraries(get_set_robot_position ${catkin_LIBRARIES})
