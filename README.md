@@ -32,6 +32,15 @@ roslaunch jackal_velodyne run.launch
 
 Change sensor settings at the bottom of `jackal_velodyne.urdf.xacro`
 
+```
+parent="base_link"
+name="velodyne"
+topic="/velodyne_points"
+hz="10"
+samples="1800"
+gpu="false"
+```
+
 ## New Worlds
 
 1. Put new world file to `worlds` folder
