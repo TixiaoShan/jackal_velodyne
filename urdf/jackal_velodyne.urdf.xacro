@@ -209,13 +209,13 @@
 
   <!-- VLP-16 -->
   <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="180">
+  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="1800" gpu="false">
     <origin xyz="0 0 0.3" rpy="0 0 0" />
   </VLP-16>
 
   <!-- VHDL-32E -->
 <!--   <xacro:include filename="$(find velodyne_description)/urdf/HDL-32E.urdf.xacro"/>
-  <HDL-32E parent="base_link" name="velodyne_2" topic="/velodyne_points_2" hz="10" samples="1800">
+  <HDL-32E parent="base_link" name="velodyne_2" topic="/velodyne_points_2" hz="10" samples="1800" gpu="false">
     <origin xyz="0 0 0.6" rpy="0 0 0" />
   </HDL-32E> -->
   
