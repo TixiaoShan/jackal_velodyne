@@ -15,6 +15,8 @@
 
 #include <gazebo_msgs/SetModelState.h>
 #include <gazebo_msgs/GetModelState.h>
+#include <gazebo_msgs/SetPhysicsProperties.h>
+#include <gazebo_msgs/GetPhysicsProperties.h>
  
 #include <vector>
 #include <cmath>

@@ -39,7 +39,7 @@ public:
 
     void run(){
 
-        ros::Rate rate(50);
+        ros::Rate rate(100);
 
         while (ros::ok()){
 
@@ -52,6 +52,7 @@ public:
             tf::Transform odom_to_laser(transform.getBasis(), transform.getOrigin());
 
             // get robot pose from Gazebo
+            getClient.waitForExistence();
             getClient.call(getmodelstate);
 
             // get translation
