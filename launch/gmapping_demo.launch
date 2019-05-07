@@ -1,4 +1,6 @@
 <launch>
+
+  <!--- Run simulator -->
   <arg name="use_sim_time" default="true" />
   <arg name="gui" default="true" />
   <arg name="headless" default="false" />
@@ -43,9 +45,17 @@
               args="-urdf -model jackal -param robot_description -x 0 -y 0 -z 1.0" />
 
   <!-- Rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find jackal_velodyne)/launch/include/run.rviz" />
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find jackal_velodyne)/launch/include/gmapping.rviz" />
 
-  <!-- TF -->
-  <node pkg="jackal_velodyne" type="tf_publisher"    name="tf_publisher"    output="screen"/>
-  
+
+
+
+
+
+  <!--- Run gmapping -->
+  <include file="$(find jackal_velodyne)/launch/include/gmapping.launch" />
+
+  <!--- Run Move Base -->
+  <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
+
 </launch>
