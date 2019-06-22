@@ -861,7 +861,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>20 0.2 2.8</size>
+              <size>20 0.05 4.0</size>
             </box>
           </geometry>
           <material>
@@ -887,7 +887,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <box>
-              <size>20 0.2 2.8</size>
+              <size>20 0.05 4.0</size>
             </box>
           </geometry>
           <surface>
@@ -963,7 +963,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>20 0.2 2.8</size>
+              <size>20 0.05 4.0</size>
             </box>
           </geometry>
           <material>
@@ -989,7 +989,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <box>
-              <size>20 0.2 2.8</size>
+              <size>20 0.05 4.0</size>
             </box>
           </geometry>
           <surface>
@@ -1065,7 +1065,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>20 0.2 2.8</size>
+              <size>20 0.05 4.0</size>
             </box>
           </geometry>
           <material>
@@ -1091,7 +1091,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <box>
-              <size>20 0.2 2.8</size>
+              <size>20 0.05 4.0</size>
             </box>
           </geometry>
           <surface>
@@ -1167,7 +1167,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>20 0.2 2.8</size>
+              <size>20 0.05 4.0</size>
             </box>
           </geometry>
           <material>
@@ -1193,7 +1193,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <box>
-              <size>20 0.2 2.8</size>
+              <size>20 0.05 4.0</size>
             </box>
           </geometry>
           <surface>
