@@ -48,6 +48,8 @@ gpu="false"
 
 ## Upgrade Gazebo
 
+It's recommended that upgrade your Gazebo to the latest version, which has great performance improvements.
+
 ```
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
