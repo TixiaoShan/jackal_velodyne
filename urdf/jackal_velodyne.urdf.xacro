@@ -209,7 +209,7 @@
 
   <!-- VLP-16 -->
   <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="1024" gpu="false" lasers="16" max_range="100">
+  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="360" gpu="true" lasers="16" max_range="100">
     <origin xyz="0 0 0.4" rpy="0 0 0" />
   </VLP-16>
 
